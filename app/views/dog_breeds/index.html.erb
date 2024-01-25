@@ -1,0 +1,30 @@
+<%= javascript_include_tag 'dog_search' , 'data-turbo-track': 'reload'%>
+<div class="container mt-5">
+  <div id="flash-notice" class="alert alert-success" style="display: none;"></div>
+  <div id="flash-error" class="alert alert-danger" style="display: none;"></div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="genius-content">
+        <h2 class="text-center mb-4">Dog Breed Search</h2>
+        <%= form_with url: { action: 'index' }, method: :get, class: 'text-center', id: 'dog-search-form' do |f| %>
+          <div class="form-group mb-0">
+            <%= f.label :name, 'Name:', class: 'sr-only' %>
+            <div class="input-group">
+              <%= f.text_field :name, class: 'form-control', placeholder: 'Enter Breed Name' %>
+              <div class="input-group-append ml-4">
+                <%= f.submit 'Search', class: 'btn btn-primary' %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="table table-striped mt-3">
+    <div class="card-body text-center">
+      <h5 class="card-title" id="breed-name-placeholder"></h5>
+      <img id="dog-image" src="" alt="Dog Image" class="img-fluid mt-3 mx-auto" style="display: none;" />
+    </div>
+  </div>
+</div>
+

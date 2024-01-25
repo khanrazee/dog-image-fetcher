@@ -1,0 +1,18 @@
+.genius-content {
+    background-color: #ffffff; /* Content area background color */
+    padding: 20px; /* Add padding as desired */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a box shadow for depth */
+}
+
+.image-styling {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

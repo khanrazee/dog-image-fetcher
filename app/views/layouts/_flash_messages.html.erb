@@ -1,0 +1,13 @@
+<% flash.each do |key, message| %>
+  <div class="alert <%= flash_class(key) %> alert-dismissible fade show" role="alert">
+    <%= message %>
+  </div>
+<% end %>
+
+<script>
+    setTimeout(function() {
+        document.querySelectorAll('.alert-dismissible').forEach(function(flashMessage) {
+            flashMessage.remove();
+        });
+    }, 3000);
+</script>
